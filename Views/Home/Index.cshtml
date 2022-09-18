@@ -1,0 +1,30 @@
+﻿@model IEnumerable<ContactsWebApp.Models.Contact>
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>@ViewData["Title"] - Home page</title>
+    <link rel="stylesheet" href="~/css/site.css" type = "text/css">
+</head>
+<body>
+    <div>
+        <h2 class="pageTitle">Contacts: </h2>
+        <table class="table">
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        <a asp-action="Details" asp-route-id="@item.Id">
+                            <button class="contactInfo">@item.Name</button>
+                        </a>
+                    </td>
+                </tr>
+            }
+        </table>
+        <a asp-action="Create">
+            <button class="actionButton">Create</button>
+        </a>
+    </div>
+</body>
+</html>

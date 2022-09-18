@@ -1,0 +1,48 @@
+﻿@model ContactsWebApp.Models.Contact
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>@ViewData["Title"] - Show contact</title>
+    <link rel="stylesheet" href="~/css/site.css" type = "text/css">
+</head>
+<body>
+    
+    <div>
+        <h2 class="pageTitle" name="details">Details: </h2>
+        <dl class="contactInfo">
+                <dt>
+                    <b>Name:</b>  
+                    @Html.DisplayFor(model => model.Name)
+                </dt>
+               
+                <dt>
+                    <b>Phone Number:</b>
+                    @Html.DisplayFor(model => model.PhoneNumber)
+                </dt>
+                <dt>
+                    <b>Job Title:</b>
+                    @Html.DisplayFor(model => model.JobTitle)
+                </dt>
+                
+                <dt>
+                    <b>Birth Date:</b>
+                    @Html.DisplayFor(model => model.BirthDate)
+                </dt>
+        </dl>
+        <p>
+            <a asp-action="Edit" asp-route-id="@Model.Id">
+                <button class="actionButton">Edit</button>
+            </a>
+            <a asp-controller="Home" asp-action="Delete" asp-route-id="@Model.Id" method="post">
+                <button class="actionButton">Delete</button>
+            </a>
+        </p>
+        <p>
+            <a asp-action="Index">
+                <button name="backToList" class="actionButton">Back to List</button>
+            </a>
+        </p>
+    </div>
+</body>
+</html>

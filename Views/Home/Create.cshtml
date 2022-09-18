@@ -1,0 +1,43 @@
+﻿@model ContactsWebApp.Models.Contact
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>@ViewData["Title"] - Add Contact</title>
+    <link rel="stylesheet" href="~/css/site.css" type = "text/css">
+</head>
+<body>
+    
+    <div>
+        <h2 class="pageTitle">Add contact: </h2>
+        <form id="form" asp-action="create" asp-controller="home">
+            <dl class="contactInfo">
+                <dt><b>Name</b></dt>
+                <dd>
+                    <input class="inputData" id="inputName" type="text" asp-for="Name">
+                </dd>
+
+                <dt><b>Phone Number</b></dt>
+                <dd>
+                    <input id="inputPhone" class="inputData" type="text" asp-for="PhoneNumber" />
+                </dd>
+
+                <dt><b>Job Title</b></dt>
+                <dd>
+                    <input id="inputName" class="inputData" type="text" asp-for="JobTitle">
+                </dd>
+
+                <dt><b>Birth Date</b></dt>
+                <dd>
+                    <input type="date" class="inputData" asp-for="BirthDate" value=" "/>
+                </dd>
+            </dl>
+            <p>
+                <script src="~/js/site.js"></script>
+                <input class="actionButton" name="addButton" type="submit" value="Add"/>
+            </p>
+        </form>
+    </div>
+</body>
+</html>
+

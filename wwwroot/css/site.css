@@ -1,0 +1,49 @@
+html {
+}
+
+body {
+    margin-bottom: 60px;
+    background-color: #ffc0cb;
+}
+a {
+    text-decoration: none;
+}
+.actionButton {
+    background-color: #00bfff;
+    border: none;
+    font-size: 30px;
+    padding: 10px 60px;
+    margin: 2px 10px;
+    border-radius: 10px;
+}
+.contactInfo {
+    background: none;
+    border: none;
+    color: black;
+    padding: 1px 40px 2px 10px;
+    font-size: 25px;
+}
+.pageTitle {
+    font-size: 60px;
+    margin: 20px 30px 10px;
+}
+button[name="backToList"] {
+    padding: 10px 123px;
+}
+
+.inputData {
+    border-color: #00bfff;
+    background: none;
+    border-radius: 10px;
+    font-size: 25px;
+}
+input[type="date"] {
+    padding: 5px 98px 1px 1px;
+}
+input[name="addButton"] {
+    padding: 10px 135px 10px 130px
+}
+input[name="saveButton"] {
+    padding: 10px 57px 10px 80px
+}
+
